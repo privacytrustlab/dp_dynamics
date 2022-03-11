@@ -48,13 +48,13 @@ This table presents the main results from our paper. We show results for linear 
 
 
 We compare the privacy accuracy tradeoff of model under following types of algorithms and privacy analyses.
-1. noisy mini-batch GD with momentum and per-example gradient clipping, without regularization (DP-SGD)
+1. (reproduced from [3]) noisy mini-batch GD with momentum and per-example gradient clipping, without regularization (DP-SGD)
 2. noisy mini-batch GD with momentum and per-example feature clipping, without regularization (DP-SGD)
 3. noisy mini-batch GD with momentum and per-example gradient clipping, with l2 regularization (DP-SGD)
 4. noisy mini-batch GD with momentum and per-example feature clipping, with l2 regularization (DP-SGD)
 5. vanilla noisy mini-batch GD without momentum, with per-example gradient clipping and per-example feature clipping, with l2 regularization (privacy dynamics analysis and DP-SGD analysis)
 
-We also add the non-dp experiment results described in [Tramèr and Boneh, 2021](https://arxiv.org/pdf/2011.11660.pdf) for comparison.
+We also add the non-dp experiment results for comparison.
 
 
 For each dataset, we target a privacy budget of `(epsilon=3, delta=10^-5)`.
@@ -139,6 +139,6 @@ python3 -m transfer.transfer_cifar --feature_path=transfer/features/simclr_r50_2
 
 [1] Jiayuan Ye and Reza Shokri. [Differentially Private Learning Needs Hidden State (Or Much Faster Convergence)](https://arxiv.org/abs/2203.05363). arXiv:2203.05363, 2022.
 
-[2] Rishav Chourasia, Jiayuan Ye, and Reza Shokri. [Differential Privacy Dynamics of Langevin Diffusion and Noisy Gradient Descent](https://arxiv.org/pdf/2102.05855.pdf). NeurIPS, 2021.
+[2] Rishav Chourasia*, Jiayuan Ye*, and Reza Shokri. [Differential Privacy Dynamics of Langevin Diffusion and Noisy Gradient Descent](https://arxiv.org/pdf/2102.05855.pdf). NeurIPS, 2021.
 
 [3] Florian Tramèr and Dan Boneh. [Differentially Private Learning Needs Better Features (or Much More Data)](https://arxiv.org/pdf/2011.11660.pdf). ICLR, 2021.
