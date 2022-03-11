@@ -1,13 +1,9 @@
 # Privacy Dynamics for Noisy (Stochastic) Mini-batch Gradient Descent
 
-This repository contains the code to train differentially private models using privacy dynamics analysis. Currently, privacy dynamics analysis supports regularized logistic regression model trained with vanilla noisy mini-batch GD (i.e. no momentum, no adaptive step-size etc.).
+This repository contains the code to train differentially private models using privacy dynamics analysis. Currently, privacy dynamics analysis supports regularized logistic regression model trained with vanilla noisy mini-batch GD (i.e. no momentum, no adaptive step-size etc.). More details about the algorithm and privacy dynamics analysis are described in our paper:
 
-More details about the algorithm and privacy dynamics analysis are described in our paper:
-
-_Differentially Private Learning Needs Hidden State (Or Much Faster Convergence)_
-
-**Jiayuan Ye and Reza Shokri**
-
+_Differentially Private Learning Needs Hidden State (Or Much Faster Convergence)_</br>
+**Jiayuan Ye and Reza Shokri**</br>
 [arXiv:2203.05363](https://arxiv.org/abs/2203.05363)
 
 
@@ -141,7 +137,7 @@ python3 -m transfer.transfer_cifar --feature_path=transfer/features/simclr_r50_2
 
 ## Citation
 
-[1] Jiayuan Ye and Reza Shokri. [Differentially Private Learning Needs Hidden State (Or Much Faster Convergence)](https://arxiv.org/abs/2203.05363). arXiv, 2022.
+[1] Jiayuan Ye and Reza Shokri. [Differentially Private Learning Needs Hidden State (Or Much Faster Convergence)](https://arxiv.org/abs/2203.05363). arXiv:2203.05363, 2022.
 
 [2] Rishav Chourasia, Jiayuan Ye, and Reza Shokri. [Differential Privacy Dynamics of Langevin Diffusion and Noisy Gradient Descent](https://arxiv.org/pdf/2102.05855.pdf). NeurIPS, 2021.
 
