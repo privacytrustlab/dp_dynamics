@@ -111,7 +111,7 @@ Public source models fined tuned to do private learning on CIFAR-10
     1. ResNeXt-29 (CIFAR-100)
     2. SIMCLR v2 (unlabelled ImageNet)
 
-The privacy guarantee is fixed to be epsilon = 2, delta = 10^-5. The fine-tuning is done by running noisy mini-batch GD training on features extracted from the penultimate layer of the source models. We show the transfer accuracy on CIFAR-10 for fine-tuned models as follows.
+The privacy guarantee is fixed to be `(epsilon = 2, delta = 10^-5)`. The fine-tuning is done by running noisy mini-batch GD training on features extracted from the penultimate layer of the source models. We show the transfer accuracy on CIFAR-10 for fine-tuned models as follows.
 
 | Source Model|DP-SGD + momentum (grad. clip.)| DP Dynamics + l2 reg. (grad. clip. + feature clip.)| Non-DP + sgd (no clipping)|
 |:--|:--|:--|:--|
