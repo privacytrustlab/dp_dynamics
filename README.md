@@ -10,7 +10,7 @@ _Differentially Private Learning Needs Hidden State (Or Much Faster Convergence)
 
 ## Installation
 
-The current code is adapted from the [Handcrafted-DP] repo, with slight modification to the code and requirements. The code was tested with `python 3.8`, `torch 1.10.1` and `CUDA 11.4` using GeForce 3090. To run the code, please set up the environment with the following steps.
+The code was tested with `python 3.8`, `torch 1.10.1` and `CUDA 11.4` using GeForce 3090. To run the code, please set up the environment with the following steps.
 
 1. Create conda environment
 ```
@@ -135,10 +135,14 @@ python3 -m transfer.transfer_cifar --feature_path=transfer/features/cifar100_res
 python3 -m transfer.transfer_cifar --feature_path=transfer/features/simclr_r50_2x_sk1 --batch_size=1024 --lr=1.92 --noise_multiplier=4.20 --max_data_norm=1 --max_grad_norm=1.5 --l2_reg=0.02 --momentum=0 --epochs=600
 ```
 
-## Citation
+## References
 
 [1] Jiayuan Ye and Reza Shokri. [Differentially Private Learning Needs Hidden State (Or Much Faster Convergence)](https://arxiv.org/abs/2203.05363). arXiv:2203.05363, 2022.
 
 [2] Rishav Chourasia*, Jiayuan Ye*, and Reza Shokri. [Differential Privacy Dynamics of Langevin Diffusion and Noisy Gradient Descent](https://arxiv.org/pdf/2102.05855.pdf). NeurIPS, 2021.
 
 [3] Florian Tramèr and Dan Boneh. [Differentially Private Learning Needs Better Features (or Much More Data)](https://arxiv.org/pdf/2011.11660.pdf). ICLR, 2021.
+
+## Acknowledgement
+
+The code in this repository is adapted from code in the [Handcrafted-DP](https://github.com/ftramer/Handcrafted-DP) repository, with slight modification to the code and requirements.
