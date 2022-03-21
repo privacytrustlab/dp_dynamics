@@ -65,7 +65,6 @@ def train(model, train_loader, optimizer, n_acc_steps=1, l2_reg = 0):
         loss.backward()
 
         if ((batch_idx + 1) % n_acc_steps == 0) or ((batch_idx + 1) == len(train_loader)):
-            optimizer.step()
 
             # Adding the l2 regularizer weight decay on gradient
             if (l2_reg!=0):
@@ -73,6 +72,8 @@ def train(model, train_loader, optimizer, n_acc_steps=1, l2_reg = 0):
                 for p in params:
                     p.grad += l2_reg * p
             # finish adding the l2 regularizer weight decay
+            
+            optimizer.step()
 
             optimizer.zero_grad()
         else:
