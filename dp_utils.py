@@ -316,9 +316,9 @@ def priv_dynamics_guarantees(epochs, batchsize, trainsize, l2_reg, lr, noise_mul
         return torch.tensor([10000 for order in ORDERS])
     
     if max_data_norm != None:
-        if lr >= 2/((max_data_norm**2+1)/4 + 2 * l2_reg ):
+        if lr >= 2/((max_data_norm**2+1)/2 + 2 * l2_reg ):
             if verbose:
-                print('Not applicable. Dynamics analysis requires eta < 2/((max_data_norm**2 + 1)/4 + l2_reg).')
+                print('Not applicable. Dynamics analysis requires eta < 2/((max_data_norm**2 + 1)/2 + l2_reg).')
             return np.inf
 
     # orders = np.concatenate([np.linspace(2, 20, num=181), np.linspace(20, 100, num=81)])
